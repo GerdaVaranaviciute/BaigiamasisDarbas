@@ -1,5 +1,7 @@
 ﻿
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace Framework.Pages
 {
@@ -23,6 +25,21 @@ namespace Framework.Pages
         internal static string GetText(string locator) 
         {
             return GetElement(locator).Text;
+        }
+
+        internal static void WaitForElementToBeVisible(string locator)
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(30));
+            wait.Until(d => d.FindElement(By.XPath(locator)));
+        }
+
+        internal static void AddItem(string locatorSearbox,string locatorRunSearch,string locatorClickOnSearchedElement, string locatorAddToCart, string locatorGoToChekout, string text) 
+        {
+            SendKeysToElement(locatorSearbox, text);
+            ClickElement(locatorRunSearch);
+            ClickElement(locatorClickOnSearchedElement);
+            ClickElement(locatorAddToCart);
+            ClickElement(locatorGoToChekout);
         }
     }
 }

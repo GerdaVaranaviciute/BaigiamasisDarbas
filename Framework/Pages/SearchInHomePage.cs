@@ -5,10 +5,6 @@ namespace Framework.Pages
 {
     public class SearchInHomePage
     {
-
-
-   
-
         public static void Open()
         {
             Driver.OpenPage("https://www.baldai1.lt/");

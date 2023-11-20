@@ -35,13 +35,16 @@
 
     3.1. Email error message at the chekout 
 
-        3.1.1. Add item to shopping cart;
-        3.1.2. Press "Atsiskaityti";
-        3.1.3. Enter Vardas "TEST";
-        3.1.4. Enter Pavardë "TEST";
-        3.1.5. Enter Telefono numeris "862222222";
-        3.1.6. Enter El. Paðto adresas "TEST";
-        3.1.7. Not possible to proceed with the purchase;
+        3.1.1. Put item no into searchbox "467169";
+        3.1.2. Run search;
+        3.1.3. Open found item;
+        3.1.4. Add item using button "Á krepðelá"
+        3.1.5. Press "Atsiskaityti";
+        3.1.6. Enter Vardas "TEST";
+        3.1.7. Enter Pavardë "TEST";
+        3.1.8. Enter Telefono numeris "862222222";
+        3.1.9. Enter El. Paðto adresas "TEST";
+        3.1.10. Not possible to proceed with the purchase;
 
     3.2. Proceed with the payment after entering valid customer data
     
