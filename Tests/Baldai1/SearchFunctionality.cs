@@ -4,8 +4,15 @@ using NUnit.Framework;
 
 namespace Tests.Baldai1
 {
-    internal class SearchFunctionality
+    internal class SearchFunctionality : BaseTests
     {
+        [SetUp]
+
+        public void SetUp()
+        {
+            Driver.InitializeDriver();
+        }
+
         [Test]
 
         public void SearchInBaldai1() 
@@ -18,7 +25,6 @@ namespace Tests.Baldai1
             SearchInHomePage.EnterSearchText("LOVA");
             SearchInHomePage.RunSearch();
             string actualResult = Driver.GetSearchTitle();
-            Driver.QuitDriver();
 
             Assert.AreEqual(expectedResult, actualResult);
 
