@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -76,17 +77,51 @@ namespace Framework.Pages
 
         public static void AddItem(string text)
         {
-            string locatorSearbox = "//*[@id=\"search_input\"]";
+            string locatorSearchbox = "//*[@id=\"search_input\"]";
             string locatorRunSearch = "//*[@class=\"ty-search-magnifier\"]";
             string locatorClickOnSearchedElement = "//*[@id=\"det_img_467169\"]";
             string locatorAddToCart = "//*[@id=\"button_cart_467169\"]";
-            string locatorGoToChekout = "/html/body/div[6]/div/div[2]/div[2]/a";
 
-            Common.SendKeysToElement(locatorSearbox, text);
+            Common.SendKeysToElement(locatorSearchbox, text);
             Common.ClickElement(locatorRunSearch);
-            Common.ClickElement(locatorClickOnSearchedElement);  
+            Common.ClickElement(locatorClickOnSearchedElement);
             Common.ClickElement(locatorAddToCart);
-            Common.ClickElement(locatorGoToChekout);
+        }
+
+        public static void ClickCheckbox()
+        {
+            string locator = "//*[@id=\"id_accept_terms655cfb11ae90f\"]";
+            Common.ClickElement(locator);
+        }
+
+        public static void ClickButtonAddDiscountCode()
+        {
+            string locator = "//*[@id=\"checkout_info_summary_134\"]/table/tbody[1]/tr[4]/td/div[1]/span[1]";
+            Common.ClickElement(locator);
+        }
+
+        public static void EnterDiscountCode(string text)
+        {
+            string locator = "//*[@id=\"coupon_field\"]";
+            Common.SendKeysToElement(locator, text);
+        }
+
+        public static void ClickApplyDiscountCode()
+        {
+            string locator = "//*[@id=\"promotion_input_field\"]/div/button";
+            Common.ClickElement(locator);
+        }
+
+        //public static string ErrorMessage()
+        //{
+        //        string locator = "//*[@id=\"litecheckout_email_error_message\"]/p";
+        //        return Common.GetElement(locator);
+        //}
+
+        public static void InputAddress(string text)
+        {
+            string locator = "//*[@id=\"litecheckout_s_address\"]";
+            Common.SendKeysToElement(locator, text);
         }
     }
 }

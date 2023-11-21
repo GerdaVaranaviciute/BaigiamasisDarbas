@@ -58,7 +58,7 @@
 
     3.3. Discount code functionality
 
-        3.3.1. Add item over 500eur to shopping cart;
+        3.3.1. Add item to shopping cart;
         3.2.2. Press "Atsiskaityti";
         3.2.3. At the chekout enter code BLACK50 to discount box;
         3.2.4. Discount applied;

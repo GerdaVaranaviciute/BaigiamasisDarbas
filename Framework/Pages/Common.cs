@@ -7,22 +7,22 @@ namespace Framework.Pages
 {
     internal class Common
     {
-        internal static IWebElement GetElement(string locator) 
+        internal static IWebElement GetElement(string locator)
         {
             return Driver.GetDriver().FindElement(By.XPath(locator));
         }
 
-        internal static void ClickElement(string locator) 
+        internal static void ClickElement(string locator)
         {
-            GetElement(locator).Click();        
+            GetElement(locator).Click();
         }
 
-        internal static void SendKeysToElement(string locator, string keys) 
+        internal static void SendKeysToElement(string locator, string keys)
         {
             GetElement(locator).SendKeys(keys);
         }
 
-        internal static string GetText(string locator) 
+        internal static string GetText(string locator)
         {
             return GetElement(locator).Text;
         }
@@ -33,13 +33,13 @@ namespace Framework.Pages
             wait.Until(d => d.FindElement(By.XPath(locator)));
         }
 
-        internal static void AddItem(string locatorSearbox,string locatorRunSearch,string locatorClickOnSearchedElement, string locatorAddToCart, string locatorGoToChekout, string text) 
+        internal static void AddItem(string locatorSearchbox, string locatorRunSearch, string locatorClickOnSearchedElement, string locatorAddToCart, string text)
         {
-            SendKeysToElement(locatorSearbox, text);
+            SendKeysToElement(locatorSearchbox, text);
             ClickElement(locatorRunSearch);
             ClickElement(locatorClickOnSearchedElement);
             ClickElement(locatorAddToCart);
-            ClickElement(locatorGoToChekout);
         }
     }
+
 }
