@@ -2,7 +2,6 @@
 using OpenQA.Selenium.Chrome;
 using System;
 using System.IO;
-using System.Reflection;
 
 namespace Framework
 {
