@@ -1,16 +1,15 @@
 # Baigiamasis Darbas
 
-### Webpage used for testing:
-
+#### Webpage
 [Baldai1](www.baldai1.lt)
 
 
 
-### Prerequisites
+#### Prerequisites
 
 [Baldai1](www.baldai1.lt) webapge should be opened for all test scenarious.
 
-### Test scenarious and test cases
+#### Test scenarious and test cases
 
 #### 1. Search
 
