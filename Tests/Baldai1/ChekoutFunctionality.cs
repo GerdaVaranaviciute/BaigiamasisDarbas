@@ -7,10 +7,9 @@ namespace Tests.Baldai1
     internal class ChekoutFunctionality : BaseTests
     {
         [Test]
-
         public void EmailErrorMessage()
         {
-            string expectedErrorMessage = "El pašto adresas neteisingas.";
+            string expectedErrorMessage = "Prašome įvesti tinkamą el. pašto adresą.";
 
             ChekoutPage.Open();
             ChekoutPage.ClickButtonDeclineCookies();
@@ -24,17 +23,14 @@ namespace Tests.Baldai1
             ChekoutPage.InputPhoneNumber("862222222");
             ChekoutPage.InputEmail("TEST");
             ChekoutPage.InputAddress("TEST");
-            //ChekoutPage.ErrorMessage();
-            //string actualErrorMessage = ChekoutPage.ErrorMessage();
 
-            //Assert.That(actualErrorMessage, Is.EqualTo(expectedErrorMessage));
+            Assert.That(expectedErrorMessage, Is.EqualTo(ChekoutPage.actualErrorMessage()));
         }
 
         [Test]
-
         public void ProceedingWithThePaymentWithValidCustomerData()
         {
-            //string expectedResult = "Jūsų užsakymas yra gautas";
+            string expectedOrderConfirmation = "Jūsų užsakymas yra gautas";
 
             ChekoutPage.Open();
             ChekoutPage.ClickButtonDeclineCookies();
@@ -45,10 +41,15 @@ namespace Tests.Baldai1
             ChekoutPage.InputPhoneNumber("862222222");
             ChekoutPage.InputEmail("TEST@gmail.com");
             ChekoutPage.ClickCheckbox();
+            ChekoutPage.ClickButtonPlaceOrder();
+
+            Assert.That(expectedOrderConfirmation, Is.EqualTo(ChekoutPage.ActualOrderConfirmation()));
         }
+
+        [Test]
         public void DiscountCodeUsage()
         {
-            string expextedResult = "Pritaikyta nuolaida";
+            string expectedSuccesfulDiscount = "Pritaikyta nuolaida";
 
             ChekoutPage.Open();
             ChekoutPage.ClickButtonDeclineCookies();
@@ -57,6 +58,8 @@ namespace Tests.Baldai1
             ChekoutPage.ClickButtonAddDiscountCode();
             ChekoutPage.EnterDiscountCode("BLACK50");
             ChekoutPage.ClickApplyDiscountCode();
+
+            Assert.That(expectedSuccesfulDiscount, Is.EqualTo(ChekoutPage.ActualSuccesfulDiscount()));
         }
     }
 }

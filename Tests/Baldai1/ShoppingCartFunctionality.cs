@@ -1,13 +1,11 @@
 ﻿using Framework.Pages;
 using NUnit.Framework;
-using System.Security.AccessControl;
 
 namespace Tests.Baldai1
 {
     internal class ShoppingCartFunctionality : BaseTests
     {
         [Test]
-
         public void AddItemToShoppingCart() 
         {
             ShoppingCartPage.Open();
