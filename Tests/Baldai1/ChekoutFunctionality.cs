@@ -24,7 +24,7 @@ namespace Tests.Baldai1
             ChekoutPage.InputEmail("TEST");
             ChekoutPage.InputAddress("TEST");
 
-            Assert.That(expectedErrorMessage, Is.EqualTo(ChekoutPage.actualErrorMessage()));
+            Assert.That(ChekoutPage.actualErrorMessage(), Is.EqualTo(expectedErrorMessage));
         }
 
         [Test]
@@ -43,7 +43,7 @@ namespace Tests.Baldai1
             ChekoutPage.ClickCheckbox();
             ChekoutPage.ClickButtonPlaceOrder();
 
-            Assert.That(expectedOrderConfirmation, Is.EqualTo(ChekoutPage.ActualOrderConfirmation()));
+            Assert.That(ChekoutPage.ActualOrderConfirmation(), Is.EqualTo(expectedOrderConfirmation));
         }
 
         [Test]
@@ -59,7 +59,7 @@ namespace Tests.Baldai1
             ChekoutPage.EnterDiscountCode("BLACK50");
             ChekoutPage.ClickApplyDiscountCode();
 
-            Assert.That(expectedSuccesfulDiscount, Is.EqualTo(ChekoutPage.ActualSuccesfulDiscount()));
+            Assert.That(ChekoutPage.ActualSuccesfulDiscount(), Is.EqualTo(expectedSuccesfulDiscount));
         }
     }
 }

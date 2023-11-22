@@ -1,4 +1,7 @@
-﻿namespace Framework.Pages
+﻿using OpenQA.Selenium;
+using System;
+
+namespace Framework.Pages
 {
     public class ShoppingCartPage
     {
@@ -36,6 +39,12 @@
         {
             string locator = "//*[@id=\"sw_dropdown_166\"]";
             Common.ClickElement(locator);
+        }
+
+        public static string ActualItemAddedToShoppingCart()
+        {
+            string locator = "//*[@id=\"cart_items\"]/table/tbody/tr[1]/td[2]/a[1]";
+            return Common.GetText(locator);
         }
     }
 }

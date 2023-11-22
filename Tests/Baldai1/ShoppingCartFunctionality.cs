@@ -8,6 +8,8 @@ namespace Tests.Baldai1
         [Test]
         public void AddItemToShoppingCart() 
         {
+            string expectedItemAddedToShoppingCart = "Minkštas kampas Delaware 100 (Alova 10 + Alova 04)";
+            
             ShoppingCartPage.Open();
             ShoppingCartPage.ClickDeclineCookies();
             ShoppingCartPage.ClickOnItemInHomePage();
@@ -16,6 +18,7 @@ namespace Tests.Baldai1
             ShoppingCartPage.ClickOpenShoppingCartDropdown();
             ShoppingCartPage.ClickOpenShoppingCart();
 
+            Assert.That(expectedItemAddedToShoppingCart, Is.EqualTo(ShoppingCartPage.ActualItemAddedToShoppingCart()));
         
         }
     }
