@@ -28,7 +28,7 @@ namespace Tests.Baldai1
         }
 
         [Test]
-        public void ProceedingWithThePaymentWithValidCustomerData()
+        public void ProceedWithThePaymentOnDeliveryMethodAfterEnteringValidCustomerData()
         {
             string expectedOrderConfirmation = "Jūsų užsakymas yra gautas";
 
