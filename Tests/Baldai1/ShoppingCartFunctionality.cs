@@ -10,13 +10,13 @@ namespace Tests.Baldai1
         {
             string expectedItemAddedToShoppingCart = "Minkštas kampas Delaware 100 (Alova 10 + Alova 04)";
 
-            ShoppingCartPage.ClickOnItemInHomePage();
-            ShoppingCartPage.ClickAddToCart();
-            ShoppingCartPage.ClickClosePopup();
-            ShoppingCartPage.ClickOpenShoppingCartDropdown();
-            ShoppingCartPage.ClickOpenShoppingCart();
+            HomePage.ClickOnItemInHomePage();
+            ProductPage.ClickButtonAddToCart();
+            ProductPage.ClickCloseOptionToCheckout();
+            HomePage.ClickOpenShoppingCartDropdown();
+            HomePage.ClickOpenShoppingCart();
 
-            Assert.That(expectedItemAddedToShoppingCart, Is.EqualTo(ShoppingCartPage.GetItemAddedToShoppingCart()));
+            Assert.That(expectedItemAddedToShoppingCart, Is.EqualTo(CartPage.GetItemAddedToShoppingCart()));
         
         }
     }

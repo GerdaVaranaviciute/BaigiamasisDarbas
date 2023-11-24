@@ -14,5 +14,12 @@
             Common.WaitForElementToBeVisible(locator);
             Common.ClickElement(locator);
         }
+
+        public static void ClickCloseOptionToCheckout()
+        {
+            string locator = "//h1//*[contains(@class,'cm-notification-close')]";
+            Common.WaitForElementToBeVisible(locator);
+            Common.ClickElement(locator);
+        }
     }
 }
