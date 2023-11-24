@@ -12,7 +12,7 @@ namespace Tests.Baldai1
             string expectedResult = "Lovos - Greitas ir nemokamas pristatymas | Baldai1.lt";
 
             HomePage.Open();
-            SearchInHomePage.ClickButtonDeclineCookies();
+            HomePage.ClickButtonDeclineCookies();
             SearchInHomePage.EnterSearchText("LOVA");
             SearchInHomePage.RunSearch();
             string actualResult = Driver.GetSearchTitle();

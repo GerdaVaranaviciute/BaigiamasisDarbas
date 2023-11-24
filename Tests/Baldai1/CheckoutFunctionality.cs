@@ -11,19 +11,19 @@ namespace Tests.Baldai1
             string expectedErrorMessage = "Prašome įvesti tinkamą el. pašto adresą.";
 
             HomePage.Open();
-            CheckoutPage.ClickButtonDeclineCookies();
+            HomePage.ClickButtonDeclineCookies();
             CheckoutPage.EnterSearchText("467169");
-            CheckoutPage.RunSearch();
+            CheckoutPage.ClickButtonSearch();
             CheckoutPage.OpenFoundItem();
             CheckoutPage.ClickButtonAddToCart();
             CheckoutPage.ClickButtonGoToChekout();
-            CheckoutPage.InputName("TEST");
-            CheckoutPage.InputSurname("TEST");
-            CheckoutPage.InputPhoneNumber("862222222");
-            CheckoutPage.InputEmail("TEST");
-            CheckoutPage.InputAddress("TEST");
+            CheckoutPage.EnterName("TEST");
+            CheckoutPage.EnterSurname("TEST");
+            CheckoutPage.EnterPhoneNumber("862222222");
+            CheckoutPage.EnterEmail("TEST");
+            CheckoutPage.EnterAddress("TEST");
 
-            Assert.That(CheckoutPage.ActualErrorMessage(), Is.EqualTo(expectedErrorMessage));
+            Assert.That(CheckoutPage.GetErrorMessage(), Is.EqualTo(expectedErrorMessage));
         }
 
         [Test]
@@ -31,18 +31,18 @@ namespace Tests.Baldai1
         {
             string expectedOrderConfirmation = "Jūsų užsakymas yra gautas";
 
-            CheckoutPage.Open();
-            CheckoutPage.ClickButtonDeclineCookies();
+            HomePage.Open();
+            HomePage.ClickButtonDeclineCookies();
             CheckoutPage.AddItem("467169");
             CheckoutPage.ClickButtonGoToChekout();
-            CheckoutPage.InputName("TEST");
-            CheckoutPage.InputSurname("TEST");
-            CheckoutPage.InputPhoneNumber("862222222");
-            CheckoutPage.InputEmail("TEST@gmail.com");
+            CheckoutPage.EnterName("TEST");
+            CheckoutPage.EnterSurname("TEST");
+            CheckoutPage.EnterPhoneNumber("862222222");
+            CheckoutPage.EnterEmail("TEST@gmail.com");
             CheckoutPage.ClickCheckbox();
             CheckoutPage.ClickButtonPlaceOrder();
 
-            Assert.That(CheckoutPage.ActualOrderConfirmation(), Is.EqualTo(expectedOrderConfirmation));
+            Assert.That(CheckoutPage.GetOrderConfirmation(), Is.EqualTo(expectedOrderConfirmation));
         }
 
         [Test]
@@ -50,15 +50,15 @@ namespace Tests.Baldai1
         {
             string expectedSuccesfulDiscount = "Pritaikyta nuolaida";
 
-            CheckoutPage.Open();
-            CheckoutPage.ClickButtonDeclineCookies();
+            HomePage.Open();
+            HomePage.ClickButtonDeclineCookies();
             CheckoutPage.AddItem("467169");
             CheckoutPage.ClickButtonGoToChekout();
             CheckoutPage.ClickButtonAddDiscountCode();
             CheckoutPage.EnterDiscountCode("BLACK50");
             CheckoutPage.ClickApplyDiscountCode();
 
-            Assert.That(CheckoutPage.ActualSuccesfulDiscount(), Is.EqualTo(expectedSuccesfulDiscount));
+            Assert.That(CheckoutPage.GetSuccesfulDiscountMessage(), Is.EqualTo(expectedSuccesfulDiscount));
         }
     }
 }

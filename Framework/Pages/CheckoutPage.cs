@@ -8,7 +8,7 @@
             Common.SendKeysToElement(locator, text);
         }
 
-        public static void RunSearch()
+        public static void ClickButtonSearch()
         {
             string locator = "//*[@class=\"ty-search-magnifier\"]";
             Common.ClickElement(locator);
@@ -33,28 +33,28 @@
             Common.ClickElement(locator);
         }
 
-        public static void InputName(string text)
+        public static void EnterName(string name)
         {
             string locator = "//*[@id=\"litecheckout_firstname\"]";
-            Common.SendKeysToElement(locator, text);
+            Common.SendKeysToElement(locator, name);
         }
 
-        public static void InputSurname(string text)
+        public static void EnterSurname(string surname)
         {
             string locator = "//*[@id=\"litecheckout_lastname\"]";
-            Common.SendKeysToElement(locator, text);
+            Common.SendKeysToElement(locator, surname);
         }
 
-        public static void InputPhoneNumber(string text)
+        public static void EnterPhoneNumber(string phoneNumber)
         {
             string locator = "//*[@id=\"litecheckout_phone\"]";
-            Common.SendKeysToElement(locator, text);
+            Common.SendKeysToElement(locator, phoneNumber);
         }
 
-        public static void InputEmail(string text)
+        public static void EnterEmail(string email)
         {
             string locator = "//*[@id=\"litecheckout_email\"]";
-            Common.SendKeysToElement(locator, text);
+            Common.SendKeysToElement(locator, email);
         }
 
         public static void AddItem(string text)
@@ -97,19 +97,19 @@
             Common.ClickElement(locator);
         }
 
-        public static void InputAddress(string text)
+        public static void EnterAddress(string address)
         {
             string locator = "//*[@id=\"litecheckout_s_address\"]";
-            Common.SendKeysToElement(locator, text);
+            Common.SendKeysToElement(locator, address);
         }
 
-        public static string ActualErrorMessage()
+        public static string GetErrorMessage()
         {
             string locator = "//*[@id=\"litecheckout_email_error_message\"]";
             return Common.GetText(locator);
         }
 
-        public static string ActualOrderConfirmation()
+        public static string GetOrderConfirmation()
         {
             string locator = "//*[@id=\"breadcrumbs_10\"]/div/span[2]";
             Common.WaitForElementToBeVisible(locator);
@@ -122,7 +122,7 @@
             Common.ClickElement(locator);
         }
 
-        public static string ActualSuccesfulDiscount()
+        public static string GetSuccesfulDiscountMessage()
         {
             string locator = "//*[@id=\"applied_promotions\"]/span";
             Common.WaitForElementToBeVisible(locator);

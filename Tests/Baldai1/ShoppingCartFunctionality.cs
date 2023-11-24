@@ -18,7 +18,7 @@ namespace Tests.Baldai1
             ShoppingCartPage.ClickOpenShoppingCartDropdown();
             ShoppingCartPage.ClickOpenShoppingCart();
 
-            Assert.That(expectedItemAddedToShoppingCart, Is.EqualTo(ShoppingCartPage.ActualItemAddedToShoppingCart()));
+            Assert.That(expectedItemAddedToShoppingCart, Is.EqualTo(ShoppingCartPage.GetItemAddedToShoppingCart()));
         
         }
     }
