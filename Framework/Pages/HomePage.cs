@@ -38,13 +38,13 @@
         {
             public static void ClickOpenShoppingCart()
             {
-                string locator = "//*[@id='dropdown_166']/div/div[3]/div[1]/a";
+                string locator = "//*[@id='slide_cart_slide']//a[contains(@class,'btn--view_cart')]";
                 Common.ClickElement(locator);
             }
 
             public static void ClickOpenShoppingCartDropdown()
             {
-                string locator = "//*[@id='sw_dropdown_166']";
+                string locator = "//*[@class='ty-dropdown-box']//*[@class='ty-minicart__block']";
                 Common.ClickElement(locator);
             }
         }
