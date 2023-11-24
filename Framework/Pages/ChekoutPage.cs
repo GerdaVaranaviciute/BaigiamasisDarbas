@@ -1,7 +1,4 @@
-﻿using OpenQA.Selenium;
-using System;
-
-namespace Framework.Pages
+﻿namespace Framework.Pages
 {
     public class ChekoutPage
     {
@@ -125,7 +122,7 @@ namespace Framework.Pages
 
         public static string ActualOrderConfirmation()
         {
-            String locator = "//*[@id=\"breadcrumbs_10\"]/div/span[2]";
+            string locator = "//*[@id=\"breadcrumbs_10\"]/div/span[2]";
             Common.WaitForElementToBeVisible(locator);
             return Common.GetText(locator);
         }
