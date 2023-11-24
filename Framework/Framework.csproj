@@ -58,7 +58,6 @@
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\ShoppingCartPage.cs" />
     <Compile Include="Pages\Common.cs" />
-    <Compile Include="Pages\SearchInHomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

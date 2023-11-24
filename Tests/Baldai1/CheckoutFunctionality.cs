@@ -12,8 +12,8 @@ namespace Tests.Baldai1
 
             HomePage.Open();
             HomePage.ClickButtonDeclineCookies();
-            CheckoutPage.EnterSearchText("467169");
-            CheckoutPage.ClickButtonSearch();
+            HomePage.EnterSearchText("467169");
+            HomePage.ClickButtonSearch();
             CheckoutPage.OpenFoundItem();
             CheckoutPage.ClickButtonAddToCart();
             CheckoutPage.ClickButtonGoToChekout();

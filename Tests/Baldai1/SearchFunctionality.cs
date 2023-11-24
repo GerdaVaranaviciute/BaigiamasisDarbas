@@ -13,8 +13,8 @@ namespace Tests.Baldai1
 
             HomePage.Open();
             HomePage.ClickButtonDeclineCookies();
-            SearchInHomePage.EnterSearchText("LOVA");
-            SearchInHomePage.RunSearch();
+            HomePage.EnterSearchText("LOVA");
+            HomePage.ClickButtonSearch();
             string actualResult = Driver.GetSearchTitle();
 
             Assert.AreEqual(expectedResult, actualResult);
