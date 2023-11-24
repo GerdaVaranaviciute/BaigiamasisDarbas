@@ -8,7 +8,7 @@ namespace Tests.Baldai1
         [Test]
         public void AddItemToShoppingCart() 
         {
-            string expectedItemAddedToShoppingCart = "Minkštas kampas Delaware 100 (Alova 10 + Alova 04)";
+            string expectedItemTitle = "Minkštas kampas Delaware 100 (Alova 10 + Alova 04)";
 
             HomePage.ClickOnItemInHomePage();
             ProductPage.ClickButtonAddToCart();
@@ -16,7 +16,7 @@ namespace Tests.Baldai1
             HomePage.UserSection.ClickOpenShoppingCartDropdown();
             HomePage.UserSection.ClickOpenShoppingCart();
 
-            Assert.That(expectedItemAddedToShoppingCart, Is.EqualTo(CartPage.GetItemAddedToShoppingCart()));
+            Assert.That(expectedItemTitle, Is.EqualTo(CartPage.GetTitleOfFirstItem()));
         
         }
     }

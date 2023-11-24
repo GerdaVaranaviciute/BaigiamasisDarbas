@@ -2,10 +2,10 @@
 {
     public class CartPage
     {
-        public static string GetItemAddedToShoppingCart()
+        public static string GetTitleOfFirstItem()
         {
-            string locator = "//*[@id='cart_items']/table/tbody/tr[1]/td[2]/a[1]";
-            return Common.GetText(locator);
+            string locator = "//*[contains(@class,'product-title')]";
+            return Common.GetElementTextByIndex(locator, 0);
         }
     }
 }

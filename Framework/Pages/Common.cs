@@ -39,6 +39,12 @@ namespace Framework.Pages
             return GetElement(locator).Text;
         }
 
+        internal static string GetElementTextByIndex(string locator, int zeroBasedIndex)
+        {
+            List<IWebElement> elements = GetElements(locator);
+            return elements[zeroBasedIndex].Text;
+        }
+
         internal static void WaitForElementToBeVisible(string locator)
         {
             WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
