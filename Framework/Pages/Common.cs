@@ -31,13 +31,5 @@ namespace Framework.Pages
             WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
             wait.Until(d => d.FindElement(By.XPath(locator)));
         }
-
-        internal static void AddItem(string locatorSearchbox, string locatorRunSearch, string locatorClickOnSearchedElement, string locatorAddToCart, string text)
-        {
-            SendKeysToElement(locatorSearchbox, text);
-            ClickElement(locatorRunSearch);
-            ClickElement(locatorClickOnSearchedElement);
-            ClickElement(locatorAddToCart);
-        }
     }
 }
