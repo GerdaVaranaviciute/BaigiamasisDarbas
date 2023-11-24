@@ -1,4 +1,5 @@
 ﻿using Framework;
+using Framework.Pages;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 
@@ -9,7 +10,9 @@ namespace Tests
         [SetUp] 
         public void SetUp() 
         {
-            Driver.InitializeDriver();  
+            Driver.InitializeDriver();
+            HomePage.Open();
+            HomePage.ClickButtonDeclineCookies();
         }
 
         [TearDown] 

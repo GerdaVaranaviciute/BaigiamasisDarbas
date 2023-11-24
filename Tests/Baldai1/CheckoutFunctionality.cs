@@ -10,8 +10,6 @@ namespace Tests.Baldai1
         {
             string expectedErrorMessage = "Prašome įvesti tinkamą el. pašto adresą.";
 
-            HomePage.Open();
-            HomePage.ClickButtonDeclineCookies();
             HomePage.EnterSearchText("467169");
             HomePage.ClickButtonSearch();
             SearchPage.ClickFirstResultItem();
@@ -31,8 +29,6 @@ namespace Tests.Baldai1
         {
             string expectedOrderConfirmation = "Jūsų užsakymas yra gautas";
 
-            HomePage.Open();
-            HomePage.ClickButtonDeclineCookies();
             HomePage.EnterSearchText("467169");
             HomePage.ClickButtonSearch();
             SearchPage.ClickFirstResultItem();
@@ -53,8 +49,6 @@ namespace Tests.Baldai1
         {
             string expectedSuccesfulDiscount = "Pritaikyta nuolaida";
 
-            HomePage.Open();
-            HomePage.ClickButtonDeclineCookies();
             HomePage.EnterSearchText("467169");
             HomePage.ClickButtonSearch();
             SearchPage.ClickFirstResultItem();
