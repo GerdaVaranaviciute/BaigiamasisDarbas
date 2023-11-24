@@ -26,7 +26,7 @@
             Common.SendKeysToElement(locator, email);
         }
 
-        public static void ClickCheckbox()
+        public static void ClickCheckboxTermsAndConditions()
         {
             string locator = "//*[@id=\"litecheckout_terms\"]/div/div/label";
             if (!Common.IsElementSelected(locator))

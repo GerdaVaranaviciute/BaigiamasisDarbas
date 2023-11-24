@@ -38,7 +38,7 @@ namespace Tests.Baldai1
             CheckoutPage.EnterSurname("TEST");
             CheckoutPage.EnterPhoneNumber("862222222");
             CheckoutPage.EnterEmail("TEST@gmail.com");
-            CheckoutPage.ClickCheckbox();
+            CheckoutPage.ClickCheckboxTermsAndConditions();
             CheckoutPage.ClickButtonPlaceOrder();
 
             Assert.That(CheckoutPage.GetOrderConfirmation(), Is.EqualTo(expectedOrderConfirmation));
