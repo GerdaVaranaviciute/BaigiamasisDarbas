@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace Tests.Baldai1
 {
-    internal class CheckoutFunctionality : BaseTests
+    internal class CheckoutFunctionality : BaseTest
     {
         [Test]
         public void EmailErrorMessage()

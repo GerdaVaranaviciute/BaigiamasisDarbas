@@ -4,7 +4,7 @@ using NUnit.Framework;
 
 namespace Tests.Baldai1
 {
-    internal class SearchFunctionality : BaseTests
+    internal class SearchFunctionality : BaseTest
     {
         [Test]
         public void SearchInBaldai1() 

@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace Tests.Baldai1
 {
-    internal class ShoppingCartFunctionality : BaseTests
+    internal class ShoppingCartFunctionality : BaseTest
     {
         [Test]
         public void AddItemToShoppingCart() 

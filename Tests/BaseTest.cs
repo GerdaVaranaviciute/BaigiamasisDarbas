@@ -4,7 +4,7 @@ using NUnit.Framework.Interfaces;
 
 namespace Tests
 {
-    internal class BaseTests
+    internal class BaseTest
     {
         [SetUp] 
         public void SetUp() 

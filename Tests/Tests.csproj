@@ -52,7 +52,7 @@
     <Compile Include="Baldai1\CheckoutFunctionality.cs" />
     <Compile Include="Baldai1\ShoppingCartFunctionality.cs" />
     <Compile Include="Baldai1\SearchFunctionality.cs" />
-    <Compile Include="BaseTests.cs" />
+    <Compile Include="BaseTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
