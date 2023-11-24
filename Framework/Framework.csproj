@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Driver.cs" />
     <Compile Include="Pages\CheckoutPage.cs" />
+    <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\ShoppingCartPage.cs" />
     <Compile Include="Pages\Common.cs" />
     <Compile Include="Pages\SearchInHomePage.cs" />

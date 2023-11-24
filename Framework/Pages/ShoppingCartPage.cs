@@ -2,11 +2,6 @@
 {
     public class ShoppingCartPage
     {
-        public static void Open()
-        {
-            Driver.OpenPage("https://www.baldai1.lt/");
-        }
-
         public static void ClickAddToCart()
         {
             string locator = "//*[@id=\"button_cart_518934\"]";
@@ -29,12 +24,6 @@
         public static void ClickOpenShoppingCart()
         {
             string locator = "//*[@id=\"dropdown_166\"]/div/div[3]/div[1]/a";
-            Common.ClickElement(locator);
-        }
-
-        public static void ClickDeclineCookies()
-        {
-            string locator = "//*[@id=\"CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll\"]";
             Common.ClickElement(locator);
         }
 

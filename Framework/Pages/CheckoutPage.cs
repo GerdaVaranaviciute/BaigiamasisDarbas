@@ -2,17 +2,6 @@
 {
     public class CheckoutPage
     {
-        public static void Open()
-        {
-            Driver.OpenPage("https://www.baldai1.lt/");
-        }
-
-        public static void ClickButtonDeclineCookies()
-        {
-            string locator = "//*[@id=\"CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll\"]";
-            Common.ClickElement(locator);
-        }
-
         public static void EnterSearchText(string text)
         {
             string locator = "//*[@id=\"search_input\"]";

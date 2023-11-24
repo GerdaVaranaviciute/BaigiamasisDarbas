@@ -9,9 +9,9 @@ namespace Tests.Baldai1
         public void AddItemToShoppingCart() 
         {
             string expectedItemAddedToShoppingCart = "Minkštas kampas Delaware 100 (Alova 10 + Alova 04)";
-            
-            ShoppingCartPage.Open();
-            ShoppingCartPage.ClickDeclineCookies();
+
+            HomePage.Open();
+            HomePage.ClickButtonDeclineCookies();
             ShoppingCartPage.ClickOnItemInHomePage();
             ShoppingCartPage.ClickAddToCart();
             ShoppingCartPage.ClickClosePopup();

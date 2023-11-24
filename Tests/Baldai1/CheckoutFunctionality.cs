@@ -10,7 +10,7 @@ namespace Tests.Baldai1
         {
             string expectedErrorMessage = "Prašome įvesti tinkamą el. pašto adresą.";
 
-            CheckoutPage.Open();
+            HomePage.Open();
             CheckoutPage.ClickButtonDeclineCookies();
             CheckoutPage.EnterSearchText("467169");
             CheckoutPage.RunSearch();
