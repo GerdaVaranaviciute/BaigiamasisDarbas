@@ -10,7 +10,7 @@
 
         public static void ClickButtonGoToChekout()
         {
-            string locator = "/html/body/div[5]/div/div[2]/div[2]/a";
+            string locator = "//*[contains(@class,'btn__primary') and contains(@class,'cm-notification-close')]";
             Common.WaitForElementToBeVisible(locator);
             Common.ClickElement(locator);
         }
