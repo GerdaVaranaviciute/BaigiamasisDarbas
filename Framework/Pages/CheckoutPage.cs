@@ -1,6 +1,6 @@
 ﻿namespace Framework.Pages
 {
-    public class ChekoutPage
+    public class CheckoutPage
     {
         public static void Open()
         {
