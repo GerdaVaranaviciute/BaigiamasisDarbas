@@ -117,7 +117,7 @@ namespace Framework.Pages
             Common.SendKeysToElement(locator, text);
         }
 
-        public static string actualErrorMessage()
+        public static string ActualErrorMessage()
         {
             string locator = "//*[@id=\"litecheckout_email_error_message\"]";
             return Common.GetText(locator);

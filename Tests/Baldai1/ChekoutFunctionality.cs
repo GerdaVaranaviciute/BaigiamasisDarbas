@@ -24,7 +24,7 @@ namespace Tests.Baldai1
             ChekoutPage.InputEmail("TEST");
             ChekoutPage.InputAddress("TEST");
 
-            Assert.That(ChekoutPage.actualErrorMessage(), Is.EqualTo(expectedErrorMessage));
+            Assert.That(ChekoutPage.ActualErrorMessage(), Is.EqualTo(expectedErrorMessage));
         }
 
         [Test]
