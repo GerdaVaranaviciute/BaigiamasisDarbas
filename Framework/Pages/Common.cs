@@ -6,7 +6,7 @@ namespace Framework.Pages
 {
     internal class Common
     {
-        internal static IWebElement GetElement(string locator)
+        private static IWebElement GetElement(string locator)
         {
             return Driver.GetDriver().FindElement(By.XPath(locator));
         }
@@ -30,6 +30,11 @@ namespace Framework.Pages
         {
             WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
             wait.Until(d => d.FindElement(By.XPath(locator)));
+        }
+
+        internal static bool IsElementSelected(string locator)
+        {
+            return GetElement(locator).Selected;
         }
     }
 }

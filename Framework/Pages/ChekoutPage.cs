@@ -87,11 +87,9 @@ namespace Framework.Pages
         public static void ClickCheckbox()
         {
             string locator = "//*[@id=\"litecheckout_terms\"]/div/div/label";
-            IWebElement checkboxElement = Common.GetElement(locator);
-
-            if (!checkboxElement.Selected)
+            if (!Common.IsElementSelected(locator))
             {
-                checkboxElement.Click();
+                Common.ClickElement(locator);
             }
         }
 
