@@ -38,7 +38,7 @@
         {
             public static void ClickOpenShoppingCart()
             {
-                string locator = "//*[@id='slide_cart_slide']//a[contains(@class,'btn--view_cart')]";
+                string locator = "//*[contains(@class,'cm-cart-content')]//*[contains(@class,'btn__secondary')]";
                 Common.ClickElement(locator);
             }
 
