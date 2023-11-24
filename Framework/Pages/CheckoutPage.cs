@@ -14,15 +14,15 @@
             Common.ClickElement(locator);
         }
 
-        public static void OpenFoundItem()
+        public static void ClickFirstResultItem()
         {
-            string locator = "//*[@id=\"det_img_467169\"]";
-            Common.ClickElement(locator);
+            string locator = "//*[@class='ty-grid-list__image']";
+            Common.ClickElementByIndex(locator, 0);
         }
 
         public static void ClickButtonAddToCart()
         {
-            string locator = "//*[@id=\"button_cart_467169\"]";
+            string locator = "//*[contains(@id,'button_cart')]";
             Common.ClickElement(locator);
         }
 
