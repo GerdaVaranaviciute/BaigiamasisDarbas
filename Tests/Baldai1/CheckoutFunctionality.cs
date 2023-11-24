@@ -14,9 +14,9 @@ namespace Tests.Baldai1
             HomePage.ClickButtonDeclineCookies();
             HomePage.EnterSearchText("467169");
             HomePage.ClickButtonSearch();
-            CheckoutPage.ClickFirstResultItem();
-            CheckoutPage.ClickButtonAddToCart();
-            CheckoutPage.ClickButtonGoToChekout();
+            SearchPage.ClickFirstResultItem();
+            ProductPage.ClickButtonAddToCart();
+            ProductPage.ClickButtonGoToChekout();
             CheckoutPage.EnterName("TEST");
             CheckoutPage.EnterSurname("TEST");
             CheckoutPage.EnterPhoneNumber("862222222");
@@ -33,8 +33,11 @@ namespace Tests.Baldai1
 
             HomePage.Open();
             HomePage.ClickButtonDeclineCookies();
-            CheckoutPage.AddItem("467169");
-            CheckoutPage.ClickButtonGoToChekout();
+            HomePage.EnterSearchText("467169");
+            HomePage.ClickButtonSearch();
+            SearchPage.ClickFirstResultItem();
+            ProductPage.ClickButtonAddToCart();
+            ProductPage.ClickButtonGoToChekout();
             CheckoutPage.EnterName("TEST");
             CheckoutPage.EnterSurname("TEST");
             CheckoutPage.EnterPhoneNumber("862222222");
@@ -52,8 +55,11 @@ namespace Tests.Baldai1
 
             HomePage.Open();
             HomePage.ClickButtonDeclineCookies();
-            CheckoutPage.AddItem("467169");
-            CheckoutPage.ClickButtonGoToChekout();
+            HomePage.EnterSearchText("467169");
+            HomePage.ClickButtonSearch();
+            SearchPage.ClickFirstResultItem();
+            ProductPage.ClickButtonAddToCart();
+            ProductPage.ClickButtonGoToChekout();
             CheckoutPage.ClickButtonAddDiscountCode();
             CheckoutPage.EnterDiscountCode("BLACK50");
             CheckoutPage.ClickApplyDiscountCode();

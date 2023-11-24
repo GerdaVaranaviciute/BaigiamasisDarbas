@@ -2,37 +2,6 @@
 {
     public class CheckoutPage
     {
-        public static void EnterSearchText(string text)
-        {
-            string locator = "//*[@id=\"search_input\"]";
-            Common.SendKeysToElement(locator, text);
-        }
-
-        public static void ClickButtonSearch()
-        {
-            string locator = "//*[@class=\"ty-search-magnifier\"]";
-            Common.ClickElement(locator);
-        }
-
-        public static void ClickFirstResultItem()
-        {
-            string locator = "//*[@class='ty-grid-list__image']";
-            Common.ClickElementByIndex(locator, 0);
-        }
-
-        public static void ClickButtonAddToCart()
-        {
-            string locator = "//*[contains(@id,'button_cart')]";
-            Common.ClickElement(locator);
-        }
-
-        public static void ClickButtonGoToChekout()
-        {
-            string locator = "/html/body/div[5]/div/div[2]/div[2]/a";
-            Common.WaitForElementToBeVisible(locator);
-            Common.ClickElement(locator);
-        }
-
         public static void EnterName(string name)
         {
             string locator = "//*[@id=\"litecheckout_firstname\"]";
@@ -55,19 +24,6 @@
         {
             string locator = "//*[@id=\"litecheckout_email\"]";
             Common.SendKeysToElement(locator, email);
-        }
-
-        public static void AddItem(string text)
-        {
-            string locatorSearchbox = "//*[@id=\"search_input\"]";
-            string locatorRunSearch = "//*[@class=\"ty-search-magnifier\"]";
-            string locatorClickOnSearchedElement = "//*[@id=\"det_img_467169\"]";
-            string locatorAddToCart = "//*[@id=\"button_cart_467169\"]";
-
-            Common.SendKeysToElement(locatorSearchbox, text);
-            Common.ClickElement(locatorRunSearch);
-            Common.ClickElement(locatorClickOnSearchedElement);
-            Common.ClickElement(locatorAddToCart);
         }
 
         public static void ClickCheckbox()
