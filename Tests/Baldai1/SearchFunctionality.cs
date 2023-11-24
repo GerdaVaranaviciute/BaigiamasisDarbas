@@ -11,8 +11,8 @@ namespace Tests.Baldai1
         {
             string expectedResult = "Lovos - Greitas ir nemokamas pristatymas | Baldai1.lt";
 
-            HomePage.EnterSearchText("LOVA");
-            HomePage.ClickButtonSearch();
+            HomePage.SearchSection.EnterSearchText("LOVA");
+            HomePage.SearchSection.ClickButtonSearch();
             string actualResult = Driver.GetSearchTitle();
 
             Assert.AreEqual(expectedResult, actualResult);

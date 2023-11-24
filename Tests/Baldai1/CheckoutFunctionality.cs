@@ -8,8 +8,8 @@ namespace Tests.Baldai1
         [SetUp]
         public void AddItemToCart()
         {
-            HomePage.EnterSearchText("467169");
-            HomePage.ClickButtonSearch();
+            HomePage.SearchSection.EnterSearchText("467169");
+            HomePage.SearchSection.ClickButtonSearch();
             SearchPage.ClickFirstResultItem();
             ProductPage.ClickButtonAddToCart();
             ProductPage.ClickButtonGoToChekout();

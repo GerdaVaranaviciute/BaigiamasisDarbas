@@ -13,8 +13,8 @@ namespace Tests.Baldai1
             HomePage.ClickOnItemInHomePage();
             ProductPage.ClickButtonAddToCart();
             ProductPage.ClickCloseOptionToCheckout();
-            HomePage.ClickOpenShoppingCartDropdown();
-            HomePage.ClickOpenShoppingCart();
+            HomePage.UserSection.ClickOpenShoppingCartDropdown();
+            HomePage.UserSection.ClickOpenShoppingCart();
 
             Assert.That(expectedItemAddedToShoppingCart, Is.EqualTo(CartPage.GetItemAddedToShoppingCart()));
         
