@@ -1,7 +1,4 @@
-﻿using OpenQA.Selenium;
-using System;
-
-namespace Framework.Pages
+﻿namespace Framework.Pages
 {
     public class ShoppingCartPage
     {
