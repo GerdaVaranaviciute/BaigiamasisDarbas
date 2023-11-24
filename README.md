@@ -13,7 +13,7 @@
 
 #### 1. Search
 
-   1.1. Search functionality
+    1.1. Search functionality
 
        1.1.1. Place text cursor in Search textbox;
        1.1.2. Enter search keyword "LOVA";
