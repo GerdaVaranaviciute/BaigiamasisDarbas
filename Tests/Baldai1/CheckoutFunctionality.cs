@@ -5,16 +5,21 @@ namespace Tests.Baldai1
 {
     internal class CheckoutFunctionality : BaseTest
     {
-        [Test]
-        public void EmailErrorMessage()
+        [SetUp]
+        public void AddItemToCart()
         {
-            string expectedErrorMessage = "Prašome įvesti tinkamą el. pašto adresą.";
-
             HomePage.EnterSearchText("467169");
             HomePage.ClickButtonSearch();
             SearchPage.ClickFirstResultItem();
             ProductPage.ClickButtonAddToCart();
             ProductPage.ClickButtonGoToChekout();
+        }
+
+        [Test]
+        public void EmailErrorMessage()
+        {
+            string expectedErrorMessage = "Prašome įvesti tinkamą el. pašto adresą.";
+
             CheckoutPage.EnterName("TEST");
             CheckoutPage.EnterSurname("TEST");
             CheckoutPage.EnterPhoneNumber("862222222");
@@ -29,11 +34,6 @@ namespace Tests.Baldai1
         {
             string expectedOrderConfirmation = "Jūsų užsakymas yra gautas";
 
-            HomePage.EnterSearchText("467169");
-            HomePage.ClickButtonSearch();
-            SearchPage.ClickFirstResultItem();
-            ProductPage.ClickButtonAddToCart();
-            ProductPage.ClickButtonGoToChekout();
             CheckoutPage.EnterName("TEST");
             CheckoutPage.EnterSurname("TEST");
             CheckoutPage.EnterPhoneNumber("862222222");
@@ -49,11 +49,6 @@ namespace Tests.Baldai1
         {
             string expectedSuccesfulDiscount = "Pritaikyta nuolaida";
 
-            HomePage.EnterSearchText("467169");
-            HomePage.ClickButtonSearch();
-            SearchPage.ClickFirstResultItem();
-            ProductPage.ClickButtonAddToCart();
-            ProductPage.ClickButtonGoToChekout();
             CheckoutPage.ClickButtonAddDiscountCode();
             CheckoutPage.EnterDiscountCode("BLACK50");
             CheckoutPage.ClickApplyDiscountCode();
