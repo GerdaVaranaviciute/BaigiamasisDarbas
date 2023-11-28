@@ -3,22 +3,20 @@ using NUnit.Framework;
 
 namespace Tests.Baldai1
 {
-    internal class ShoppingCartFunctionality : BaseTests
+    internal class ShoppingCartFunctionality : BaseTest
     {
         [Test]
         public void AddItemToShoppingCart() 
         {
-            string expectedItemAddedToShoppingCart = "Minkštas kampas Delaware 100 (Alova 10 + Alova 04)";
-            
-            ShoppingCartPage.Open();
-            ShoppingCartPage.ClickDeclineCookies();
-            ShoppingCartPage.ClickOnItemInHomePage();
-            ShoppingCartPage.ClickAddToCart();
-            ShoppingCartPage.ClickClosePopup();
-            ShoppingCartPage.ClickOpenShoppingCartDropdown();
-            ShoppingCartPage.ClickOpenShoppingCart();
+            string expectedItemTitle = "Minkštas kampas Delaware 100 (Alova 10 + Alova 04)";
 
-            Assert.That(expectedItemAddedToShoppingCart, Is.EqualTo(ShoppingCartPage.ActualItemAddedToShoppingCart()));
+            HomePage.ClickOnItemInHomePage();
+            ProductPage.ClickButtonAddToCart();
+            ProductPage.ClickCloseOptionToCheckout();
+            HomePage.UserSection.ClickOpenShoppingCartDropdown();
+            HomePage.UserSection.ClickOpenShoppingCart();
+
+            Assert.That(expectedItemTitle, Is.EqualTo(CartPage.GetTitleOfFirstItem()));
         
         }
     }

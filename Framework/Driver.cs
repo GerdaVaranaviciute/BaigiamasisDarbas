@@ -8,18 +8,22 @@ namespace Framework
     public class Driver
     {
         static IWebDriver driver;
+
         public static void InitializeDriver()
         {
            driver = new ChromeDriver();
         }
+
         internal static IWebDriver GetDriver() 
         {
             return driver;
         }
+
         internal static void OpenPage(string url) 
         {
             driver.Url = url;
         }
+
         public static string GetSearchTitle() 
         {
             return driver.Title;
@@ -36,6 +40,7 @@ namespace Framework
             screenshot.SaveAsFile(screenshotFilePath);
             return screenshotFilePath;
         }
+
         public static void QuitDriver() 
         {
             driver.Quit();
